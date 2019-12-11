@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js" ></script>
+<link rel="stylesheet" href="style2.css"/>
+<script>
+window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Revenue By Job Location (in $100k)"
+      },
+      data: [
+      {
+        type: "bar",
+        dataPoints: [
+        { y: 198, label: "Everett"},
+        { y: 201, label: "Seattle"},
+        { y: 202, label: "Lynnwood"},
+        { y: 236, label: "Bothell"},
+        { y: 395, label: "Mukilteo"},
+        { y: 957, label: "Edmonds"}
+        ]
+      }
+      ]
+       });
+chart.render();
+ var chart = new CanvasJS.Chart("chartContainer2",
+    {
+      title:{
+        text: "Revenue By Job Type (in $100k)"
+      },
+      data: [
+      {
+        type: "bar",
+        dataPoints: [
+        { y: 198, label: "Service Plumbing"},
+        { y: 300, label: "Bid Work HVAC"},
+        { y: 500, label: "Service HVAC"},
+        { y: 880, label: "Bid Work Plumbing"},
+        { y: 700, label: "HWT Replacement"},
+        { y: 787, label: "Material Sale"}
+        ]
+      }
+      ]
+       });
+chart.render();
+}
+</script>
+</head>
+<body>
+<h2>Company Metrics</h2>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3>Total Revenue</h3>
+	<p>$406,411.29</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3>Total Jobs Avg</h3>
+	<p>$620</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3>Tickets Created</h3>
+	<p>655</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3>Tickets Scheduled</h3>
+	<p>735</p>
+    </div>
+  </div>
+</div>
+
+<div class="row chart">
+  <div class="column">
+    <div class="card">
+      <h3>Outstanding Amount</h3>
+	<p>$110,448.8</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3>Memberships Sold</h3>
+	<p>105</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3>Jobs Completed</h3>
+	<p>436</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3>Total Canceled</h3>
+	<p>65</p>
+    </div>
+  </div>
+</div>
+
+<div class="chart">
+  <div id="chartContainer"  style="width: 45%; height: 300px;display: inline-block;padding-left:50px;"></div>
+  <div id="chartContainer2" style="width: 45%; height: 300px;display: inline-block;padding-left:70px;"></div>
+</div>
+</body>
+
+</html>
